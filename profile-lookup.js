@@ -31,25 +31,31 @@ var contacts = [
 
 function lookUpProfile(name, prop) {
   // Only change code below this line
+  for (let i=0; i < contacts.length; i++) {
+  // contacts.forEach(function(contact) {
+    const objKeys = Object.keys(contacts[i]);
 
-  contacts.forEach(contact => {
-    const objKeys = Object.keys(contact);
-
-    if (name === contact.firstName) {
+    if (name === contacts[i].firstName) {
       if (objKeys.includes(prop)) {
-        console.log(contact[prop]);
-        return contact[prop];
+        return contacts[i][prop];
       } else {
         return 'No such property';
       }
 
-    } else {
-      return 'No such contact';
-    }
-    
-  });
+    } 
+  }
+  return 'No such contact';
   // Only change code above this line
 }
 // Change these values to test your function
-let x = lookUpProfile('Akira', 'likes');
+
+console.log(lookUpProfile('Akira', 'likes'));
+// "Kristian", "lastName" should return "Vos"
+// "Sherlock", "likes" should return ["Intriguing Cases", "Violin"]
+// "Harry","likes" should return an array
+console.log(lookUpProfile('Kristian', 'lastName'));
+console.log(lookUpProfile('Sherlock', 'likes'));
+console.log(lookUpProfile('Harry', 'likes'));
+console.log(lookUpProfile('Harryt', 'likes'));
+console.log(lookUpProfile('Harry', 'likest'));
 
