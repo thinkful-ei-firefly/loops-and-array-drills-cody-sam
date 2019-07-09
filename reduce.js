@@ -2,6 +2,7 @@
 
 /**
  * @param {array} - array of strings
+ * @returns {string} - a decoded string 
  */
 function reduce(arr){
 
