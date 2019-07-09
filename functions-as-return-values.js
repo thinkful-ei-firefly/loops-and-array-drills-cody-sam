@@ -10,13 +10,13 @@ function hazardWarningCreator(typeOfWarning){
   };
 }
 
-const volcanoWarning = hazardWarningCreator('Volcano\'s gonna blow');
+const volcano = hazardWarningCreator('Volcano\'s gonna blow');
 const hurricane = hazardWarningCreator('Hurricane\'s gonna blow');
-const avalanche = hazardWarningCreator('Avalanch\'s gonna plow');
+const avalanche = hazardWarningCreator('Avalanche\'s gonna plow');
 
-volcanoWarning('Maryland');
-volcanoWarning('Washington');
-volcanoWarning('England');
+volcano('Maryland');
+volcano('Washington');
+volcano('England');
 
 hurricane('Miami');
 hurricane('Alaska');

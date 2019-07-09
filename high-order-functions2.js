@@ -5,7 +5,6 @@ function filter(arr, fn) {
   for (let i=0;i<arr.length;i++) {
     if (fn(arr[i])) {
       newArray.push(arr[i]);
-      console.log('true');
     }
   }
   return newArray;
@@ -24,5 +23,5 @@ const filteredNames = filter(myNames, function(name) {
   
 });
 
-console.log(filteredNames) // => ['Rich', 'Ray']
+console.log(filteredNames); // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
